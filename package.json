@@ -16,7 +16,8 @@
     "url": "https://github.com/sleeplesseditor/Natours/issues"
   },
   "homepage": "https://github.com/sleeplesseditor/Natours#readme",
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
     "node-sass": "^4.9.3"
   }
 }
