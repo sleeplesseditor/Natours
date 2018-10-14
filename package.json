@@ -1,0 +1,22 @@
+{
+  "name": "natours",
+  "version": "1.0.0",
+  "description": "A demo website for a fictional travel company",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sleeplesseditor/Natours.git"
+  },
+  "author": "Josh Bryson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sleeplesseditor/Natours/issues"
+  },
+  "homepage": "https://github.com/sleeplesseditor/Natours#readme",
+  "dependencies": {
+    "node-sass": "^4.9.3"
+  }
+}
