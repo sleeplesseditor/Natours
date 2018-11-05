@@ -1,5 +1,32 @@
 .navigation {
-    
+    &__checkbox {
+        display: none;
+    }
+
+    &__button {
+        background-color: $color-white;
+        height: 7rem;
+        width: 7rem;
+        position: fixed;
+        top: 6rem;
+        right: 6rem;
+        border-radius: 50%;
+        z-index: 2000;
+        box-shadow: 0 1rem 3rem rgba($color-black, .1);
+        text-align: center;
+        cursor: pointer;
+
+        @include respond(tab-port) {
+            top: 4rem;
+            right: 4rem;
+        }
+
+        @include respond(phone) {
+            top: 3rem;
+            right: 3rem;
+        }
+    }
+
     &__background {
         height: 6rem;
         width: 6rem;
@@ -17,37 +44,9 @@
         }
 
         @include respond(phone) {
-            top: 3rem;
-            right: 3rem;
+            top: 3.5rem;
+            right: 3.5rem;
         }
-    }
-
-    &__button {
-        background-color: $color-white;
-        height: 7rem;
-        width: 7rem;
-        position: fixed;
-        top: 6rem;
-        right: 6rem;
-        border-radius: 50%;
-        z-index: 2000;
-        box-shadow: 0 1rem 3rem rgba($color-black, .1);
-        text-align: center;
-        cursor: pointer;
-
-        @include respond(tab-port) {
-            top: 4.5rem;
-            right: 4.5rem;
-        }
-
-        @include respond(phone) {
-            top: 3rem;
-            right: 3rem;
-        }
-    }
-
-    &__checkbox {
-        display: none;
     }
 
     &__nav {
@@ -66,7 +65,7 @@
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%);
+        transform: translate(-50%,-50%);
         list-style: none;
         text-align: center;
         width: 100%;
@@ -82,7 +81,7 @@
             display: inline-block;
             font-size: 3rem;
             font-weight: 300;
-            padding: 1rem 2rem;;
+            padding: 1rem 2rem;
             color: $color-white;
             text-decoration: none;
             text-transform: uppercase;
@@ -95,7 +94,7 @@
                 display: inline-block;
             }
         }
-
+        
         &:hover,
         &:active {
             background-position: 100%;
@@ -103,6 +102,7 @@
             transform: translateX(1rem);
         }
     }
+
 
     //FUNCTIONALITY
     &__checkbox:checked ~ &__background {
@@ -113,6 +113,7 @@
         opacity: 1;
         width: 100%;
     }
+
 
     //ICON
     &__icon {
@@ -126,7 +127,6 @@
             height: 2px;
             background-color: $color-grey-dark-3;
             display: inline-block;
-            z-index: 2001;
         }
 
         &::before,
@@ -137,13 +137,8 @@
             transition: all .2s;
         }
 
-        &::before {
-            top: -.8rem;
-        }
-
-        &::after {
-            top: .8rem; 
-        }
+        &::before { top: -.8rem; }
+        &::after { top: .8rem; }
     }
 
     &__button:hover &__icon::before {
@@ -157,7 +152,7 @@
     &__checkbox:checked + &__button &__icon {
         background-color: transparent;
     }
-    
+
     &__checkbox:checked + &__button &__icon::before {
         top: 0;
         transform: rotate(135deg);
