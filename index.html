@@ -25,11 +25,11 @@
 
             <nav class="navigation__nav">
                 <ul class="navigation__list">
-                    <li class="navigation__item"><a href="#" class="navigation__link" onclick="uncheck();"><span>01</span>About Natours</a></li>
-                    <li class="navigation__item"><a href="#" class="navigation__link" onclick="uncheck();"><span>02</span>Your benefits</a></li>
-                    <li class="navigation__item"><a href="#" class="navigation__link" onclick="uncheck();"><span>03</span>Popular tours</a></li>
-                    <li class="navigation__item"><a href="#" class="navigation__link" onclick="uncheck();"><span>04</span>Stories</a></li>
-                    <li class="navigation__item"><a href="#" class="navigation__link" onclick="uncheck();"><span>05</span>Book now</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link" id="btn-about" onclick="uncheck();"><span>01</span>About Natours</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link" id="btn-features" onclick="uncheck();"><span>02</span>Your benefits</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link" id="btn-tours" onclick="uncheck();"><span>03</span>Popular tours</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link" id="btn-stories" onclick="uncheck();"><span>04</span>Stories</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link" id="btn-book" onclick="uncheck();"><span>05</span>Book now</a></li>
                     </ul>
             </nav>
         </div>
@@ -44,14 +44,14 @@
                     <span class="heading-primary--sub">is where life happens</span>
                 </h1>
 
-                <a href="#section-tours" class="btn btn--white btn--animated">Discover our tours</a>
+                <a href="#section-tours" class="btn btn--white btn--animated" id="btn-tours">Discover our tours</a>
             </div>
         </header> 
 
         <main>
             <section class="section-about">
                 <div class="u-center-text u-margin-bottom-big">
-                    <h2 class="heading-secondary">
+                    <h2 class="heading-secondary" id="section-about-heading">
                         Exciting tours for adventurous people
                     </h2>
                 </div>
@@ -83,7 +83,7 @@
                 </div>
 
             </section>
-            <section class="section-features">
+            <section class="section-features" id="section-features-top">
 
                 <div class="row">
                     <div class="col-1-of-4">
@@ -127,7 +127,7 @@
 
             <section class="section-tours" id="section-tours">
                 <div class="u-center-text u-margin-bottom-big">
-                    <h2 class="heading-secondary">
+                    <h2 class="heading-secondary" id="section-tours-heading">
                         Most Popular Tours
                     </h2>
                 </div>
@@ -246,7 +246,7 @@
                 </div>
 
                 <div class="u-center-text u-margin-bottom-big">
-                    <h2 class="heading-secondary">
+                    <h2 class="heading-secondary" id="section-stories-heading">
                         We Make People Genuinely Happy
                     </h2>
                 </div>
@@ -295,7 +295,7 @@
 
             </section>
 
-            <section class="section-book">
+            <section class="section-book" id="section-book-heading">
                 <div class="row">
                     <div class="book">
                         <div class="book__form">
@@ -401,7 +401,49 @@
             </div>
         </div>
     </body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function (){
+            $("#btn-about").click(function (){
+                $('html, body').animate({
+                    scrollTop: $("#section-about-heading").offset().top
+                }, 1500);
+            });
+        });
+        
+        $(document).ready(function (){
+            $("#btn-features").click(function (){
+                $('html, body').animate({
+                    scrollTop: $("#section-features-top").offset().top
+                }, 1500);
+            });
+        });
+        
+        $(document).ready(function (){
+            $("#btn-tours").click(function (){
+                $('html, body').animate({
+                    scrollTop: $("#section-tours-heading").offset().top
+                }, 1500);
+            });
+        });
 
+        $(document).ready(function (){
+            $("#btn-stories").click(function (){
+                $('html, body').animate({
+                    scrollTop: $("#section-stories-heading").offset().top
+                }, 1500);
+            });
+        });
+
+        $(document).ready(function (){
+            $("#btn-book").click(function (){
+                $('html, body').animate({
+                    scrollTop: $("#section-book-heading").offset().top
+                }, 1500);
+            });
+        });
+
+    </script>
     <script>
         function uncheck()
             {
