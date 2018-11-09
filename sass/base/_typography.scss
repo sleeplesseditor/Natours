@@ -11,13 +11,15 @@ body {
     text-transform: uppercase;
     backface-visibility: hidden;
     margin-bottom: 6rem;
+    text-align: center;
 
     &--main {
         display: block;
         font-size: 6rem;
         font-weight: 400;
-        letter-spacing: 3.5rem;
+        letter-spacing: 3.8rem;
         animation: moveInLeft 1s ease-out;
+        margin-right: -3.8rem;
 
         @include respond(phone) {
             letter-spacing: 1rem;
@@ -29,9 +31,9 @@ body {
         display: block;
         font-size: 2rem;
         font-weight: 700;
-        letter-spacing: 1.65rem;
+        letter-spacing: 1.45rem;
         animation: moveInRight 1s ease-out;
-        text-align: center;
+        margin-right: -1.45rem;
 
         @include respond(phone) {
             letter-spacing: .5rem;
